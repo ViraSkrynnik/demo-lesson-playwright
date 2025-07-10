@@ -41,7 +41,9 @@ test('login and create order', async ({}) => {
   await orderCreationPage.comment.fill(faker.lorem.sentence(10))
   await orderCreationPage.createOrderButton.click()
   await expect(orderCreationPage.notificationPopUp).toBeVisible()
-  await expect(orderCreationPage.notificationPopUp).toHaveText('×Order has been created!Tracking code: undefinedok')
+  await expect(orderCreationPage.notificationPopUp).toHaveText(
+    '×Order has been created!Tracking code: undefinedok',
+  )
 })
 
 test('login and logout', async ({}) => {
